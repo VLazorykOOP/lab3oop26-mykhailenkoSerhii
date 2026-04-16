@@ -8,18 +8,18 @@ class Time
     int minute;
     int second;
 
-    Time(int hour, int minute, int second)
+    Time(int hr, int min, int sec)
     {
-        this->hour = hour;
-        this->minute = minute;
-        this->second = second;
+        hour = hr;
+        minute = min;;
+        second = sec;
     }
 
-    Time(int hour, int minute)
+    Time(int hr, int min)
     {
-        this->hour = hour;
-        this->minute = minute;
-        this->second = 0;
+        hour = hr;
+        minute = min;
+        second = 0;
     }
 
     int getHour()
@@ -42,29 +42,29 @@ class Time
         if (hr >= 24)
             hr = 0;
 
-        this->hour = hr;
+        hour = hr;
     }
 
     void setMinute(int min)
     {
         if (min >= 60)
         {
-            this->hour += 1;
+            hour += 1;
             setMinute(min-60);
             return;
         }
-        this->minute = min;
+        minute = min;
     }
 
     void setSecond(int sec)
     {
         if (sec >= 60)
         {
-            this->minute += 1;
+            minute += 1;
             setSecond(sec-60);
             return;
         }
-        this->second = sec;
+        second = sec;
     }
 
     void printTime24H()
@@ -82,7 +82,7 @@ class Time
     }
 };
 
-void test()
+void task1()
 {
     Time time(10, 0, 0);
     Time otherTime(8, 0);

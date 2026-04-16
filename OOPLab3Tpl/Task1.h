@@ -3,7 +3,7 @@
 
 
 class Task1 {};
-void test();
+void task1();
 
 
 #endif

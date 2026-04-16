@@ -1,0 +1,9 @@
+#ifndef LAB3OOP26_MYKHAILENKOSERHII_TASK1_H
+#define LAB3OOP26_MYKHAILENKOSERHII_TASK1_H
+
+
+class Task1 {};
+void test();
+
+
+#endif

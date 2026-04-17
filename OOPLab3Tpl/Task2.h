@@ -4,5 +4,6 @@
 class Task2 {};
 void task2();
 int getCount();
+void printVectorCount();
 
 #endif

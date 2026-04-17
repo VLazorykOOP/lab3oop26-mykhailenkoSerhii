@@ -188,8 +188,8 @@ void task2()
     vec2.printVector();
     vec3.printVector();
 
-    std::cout << "SET, GET" << std::endl;
-    std::cout << Vector::count << std::endl;
+    std::cout << "\nSET, GET" << std::endl;
+    printVectorCount();
 
     vec2.set(1, 100.0f);
     std::cout << "Vec3 : " << vec3.get(1) << std::endl;
@@ -197,8 +197,8 @@ void task2()
     std::cout << "Vec2 : ";
     vec2.printVector();
 
-    std::cout << "ADD, SUB, MUL" << std::endl;
-    std::cout << Vector::count << std::endl;
+    std::cout << "\nADD, SUB, MUL" << std::endl;
+    printVectorCount();
 
     vec3.Add(vec2);
     vec2.Sub(vec3);
@@ -211,8 +211,8 @@ void task2()
     std::cout << "Vec3 : ";
     vec3.printVector();
 
-    std::cout << "LARGER, SMALLER" << std::endl;
-    std::cout << Vector::count << std::endl;
+    std::cout << "\nLARGER, SMALLER" << std::endl;
+    printVectorCount();
 
     bool larger = vec2.LargerThan(vec3);
     bool lesser = vec2.LessThan(vec3);
@@ -224,5 +224,10 @@ void task2()
     vec2.~Vector();
     vec1.~Vector();
 
-    std::cout << Vector::count << std::endl;
+    printVectorCount();
+}
+
+void printVectorCount()
+{
+    std::cout << "\nAmount of Vectors : " << Vector::count << std::endl;
 }
